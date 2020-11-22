@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/aos.css">
+  <link rel="stylesheet" href="./assets/css/slick-theme.css">
+  <link rel="stylesheet" href="./assets/css/slick.css">
+</head>
+
+<body>
+  <%- include ('common/_header.ejs');  %>
+  <%- include (pageData.template) %>
+  <%- include ('common/_footer.ejs');  %>
+  <script src="./assets/js/jquery-3.5.1.min.js"></script>
+  <script src="./assets/js/aos.js"></script>
+  <script src="./assets/js/slick.js"></script>
+
+  <script>
+    // AOS
+    AOS.init();
+    // Testimonials
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      dots: true,
+      centerMode: true,
+      focusOnSelect: true
+    });
+  </script>
+</body>
+
+</html>

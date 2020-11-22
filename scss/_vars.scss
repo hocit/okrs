@@ -1,0 +1,56 @@
+/* ====================================================
+Font
+==================================================== */
+
+
+/* ====================================================
+Font Segoe UI
+==================================================== */
+
+/* ====================================================
+Position & transform
+==================================================== */
+
+/* ====================================================
+Media Quary
+==================================================== */
+@mixin mq($breakpoint: md) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+$breakpoint-sm: 640px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 990px !default;
+$breakpoints: ('xs': 'screen and (max-width: 375px)',
+	'bt5': 'screen and (max-width: 770px)',
+	'sm': 'screen and (max-width: 640px)',
+	'md': 'screen and (max-width: 768px)',
+	'bt3': 'screen and (max-width: 770px)',
+	'lg': 'screen and (max-width: 990px)',
+	'bt2': 'screen and (max-width: 830px)',
+	'bt4': 'screen and (max-width: 1080px)',
+	'ipd': 'screen and (max-width: 1024px)',
+	'bt': 'screen and (max-width: 1170px)',
+	'xl': 'screen and (max-width: 1200px)',
+	'lp': 'screen and (max-width: 1400px)',
+	'mac': 'screen and (max-width: 1700px)',
+	'sm-min': 'screen and (min-width: 641px)',
+	'md-min': 'screen and (min-width: 769px)',
+	'lg-min': 'screen and (min-width: 991px)',
+	'ipd-min': 'screen and (min-width: 991px)',
+	'xl-min': 'screen and (min-width: 1201px)',
+	'lp-min': 'screen and (min-width: 1401px)',
+) !default;
+/* ====================================================
+Color
+==================================================== */
+
+/* ====================================================
+Sizing
+==================================================== */
+
+/* ====================================================
+Misc
+==================================================== */
